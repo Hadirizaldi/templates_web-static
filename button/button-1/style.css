@@ -1,0 +1,97 @@
+*, 
+*::after, 
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  box-sizing: border-box;
+  line-height: 1.7;
+  padding: 3rem;
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* button */
+
+.btn:visited,
+.btn:link {
+  display: inline-block;
+  padding: 1.4rem 4rem;
+  border-radius: 10rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn--black {
+  background-color: black;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn--black::after {
+  background-color: black;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn--animated {
+  animation-name: moveInBottom;
+  animation-duration: 0.5s;
+  animation-delay: 0.75s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: backwards;
+}
