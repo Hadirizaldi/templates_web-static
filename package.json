@@ -1,0 +1,14 @@
+{
+  "name": "templates",
+  "version": "1.0.0",
+  "description": "Sebauh folder untuk menyimpan component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HadiRizaldi",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.63.6"
+  }
+}
